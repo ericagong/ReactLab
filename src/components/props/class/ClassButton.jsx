@@ -2,6 +2,7 @@ import React from "react";
 
 class ClassButton extends React.Component {
   render() {
+    console.log(`${this.props.text} rendered!`);
     return (
       <div>
         <button onClick={this.props.changeValue} id={this.props.id}>
