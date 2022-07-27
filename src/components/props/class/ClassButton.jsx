@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 class ClassButton extends React.Component {
   render() {
@@ -13,5 +14,10 @@ class ClassButton extends React.Component {
     );
   }
 }
+
+ClassButton.propTypes = {
+  id: PropTypes.string,
+  hello: PropTypes.string.isRequired,
+};
 
 export default ClassButton;

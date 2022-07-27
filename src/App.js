@@ -5,7 +5,7 @@ import ClassSuperConverter from "./components/state/class/ClassSuperConverter";
 import Button from "./components/props/function/Button";
 import ClassButton from "./components/props/class/ClassButton";
 
-const MemorizedBtn = React.memo(Button);
+// const MemorizedBtn = React.memo(Button);
 const MemorizedClassBtn = React.memo(ClassButton);
 
 function App() {
@@ -38,12 +38,12 @@ function App() {
       <hr />
       <div className='propsLab'>
         <h3>Button with functional Component</h3>
-        <MemorizedBtn text={value1} id='1' changeValue={changeValue} />
-        <MemorizedBtn text='other' />
+        <Button text={value1} id='1' changeValue={changeValue} fontSize={15} />
+        <Button text='other' fontSize={changeValue} />
         <hr />
         <h3>Button with class Component</h3>
-        <MemorizedClassBtn text={value2} id='2' changeValue={changeValue} />
-        <MemorizedClassBtn text='other' />
+        <ClassButton text={value2} id='2' changeValue={changeValue} />
+        <ClassButton text='other' />
       </div>
     </div>
   );
