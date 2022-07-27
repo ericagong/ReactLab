@@ -1,10 +1,13 @@
 import React from "react";
 
-const Button = ({ text, changeValue }) => {
+const Button = ({ text, changeValue, id }) => {
   console.log(`${text} was renderd!`);
   return (
     <div>
-      <button onClick={changeValue}>{text}</button>
+      <button onClick={changeValue} id={id}>
+        {/* TODO event occrus at most inner element! */}
+        {text}
+      </button>
     </div>
   );
 };
