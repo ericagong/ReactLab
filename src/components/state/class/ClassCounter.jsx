@@ -11,22 +11,18 @@ class ClassCounter extends React.Component {
 
   countHandler = () => {
     // Wrong way to use Asynchronous setState
-    // this.setState({ count: this.state.count + 1 });
-    // this.setState({ count: this.state.count + 1 });
-    // this.setState({ count: this.state.count + 1 });
+    this.setState({ count: this.state.count + 1 });
+    this.setState({ count: this.state.count + 1 });
+    this.setState({ count: this.state.count + 1 });
 
     // Correct way to use Asynchronous setState!
     this.setState((state, props) => {
-      console.log(state);
-      console.log(props);
       return {
         count: state.count + 1,
       };
     });
 
     this.setState(function (state, props) {
-      console.log(state);
-      console.log(props);
       return {
         count: state.count + 1,
       };

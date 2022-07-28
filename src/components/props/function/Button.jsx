@@ -1,7 +1,7 @@
 import React from "react";
-import PropTypes from "prop-types";
+
 const Button = ({ text, changeValue, id, fontSize }) => {
-  console.log(`${text} was renderd!`);
+  console.log(`${text} renderd from functional Component!`);
   return (
     <div>
       <button onClick={changeValue} id={id} style={{ fontSize: fontSize }}>
@@ -10,13 +10,6 @@ const Button = ({ text, changeValue, id, fontSize }) => {
       </button>
     </div>
   );
-};
-
-Button.propTypes = {
-  text: PropTypes.string.isRequired,
-  changeValue: PropTypes.func,
-  id: PropTypes.string,
-  fondSize: PropTypes.number,
 };
 
 export default Button;

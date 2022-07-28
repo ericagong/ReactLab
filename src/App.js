@@ -7,8 +7,8 @@ import ClassButton from "./components/props/class/ClassButton";
 import ClassCounter from "./components/state/class/ClassCounter";
 import Counter from "./components/state/function/Counter";
 
-// const MemorizedBtn = React.memo(Button);
 const MemorizedClassBtn = React.memo(ClassButton);
+const MemorizedBtn = React.memo(Button);
 
 function App() {
   const [value1, setValue1] = React.useState("A");
@@ -39,21 +39,26 @@ function App() {
           <ClassSuperConverter></ClassSuperConverter>
         </div>
         <div className='asynchronousState'>
-          <h3>Counter setState with Functional Component</h3>
+          <h3>Counter setState with useState</h3>
           <Counter hi='hi' />
-          <h3>Counter setState with Class Component</h3>
+          <h3>Counter setState with setState</h3>
           <ClassCounter hi='hi' />
         </div>
       </div>
       <hr />
       <div className='propsLab'>
         <h3>Button with functional Component</h3>
-        <Button text={value1} id='1' changeValue={changeValue} fontSize={15} />
-        <Button text='other' fontSize={changeValue} />
+        <MemorizedBtn
+          text={value1}
+          id='1'
+          changeValue={changeValue}
+          fontSize={15}
+        />
+        <MemorizedBtn text='other' fontSize='11' />
         <hr />
         <h3>Button with class Component</h3>
-        <ClassButton text={value2} id='2' changeValue={changeValue} />
-        <ClassButton text='other' />
+        <MemorizedClassBtn text={value2} id='2' changeValue={changeValue} />
+        <MemorizedClassBtn text='other' />
       </div>
     </div>
   );

@@ -1,9 +1,8 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 class ClassButton extends React.Component {
   render() {
-    console.log(`${this.props.text} rendered!`);
+    console.log(`${this.props.text} rendered from Class component!`);
     return (
       <div>
         <button onClick={this.props.changeValue} id={this.props.id}>
@@ -14,10 +13,5 @@ class ClassButton extends React.Component {
     );
   }
 }
-
-ClassButton.propTypes = {
-  id: PropTypes.string,
-  hello: PropTypes.string.isRequired,
-};
 
 export default ClassButton;
