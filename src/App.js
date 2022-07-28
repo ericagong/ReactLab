@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import SuperConverter from "./components/state/function/SuperConverter";
 import ClassSuperConverter from "./components/state/class/ClassSuperConverter";
@@ -63,5 +64,19 @@ function App() {
     </div>
   );
 }
+
+MemorizedBtn.propTypes = {
+  text: PropTypes.string.isRequired,
+  // id: PropTypes.string.isRequired,
+  id: PropTypes.string,
+  changeValue: PropTypes.func,
+  // fontSize: PropTypes.number,
+};
+
+MemorizedClassBtn.propTypes = {
+  text: PropTypes.string.isRequired,
+  id: PropTypes.string,
+  changeValue: PropTypes.func,
+};
 
 export default App;
