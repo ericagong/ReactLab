@@ -8,6 +8,7 @@ import ClassButton from "./components/props/class/ClassButton";
 import ClassCounter from "./components/state/class/ClassCounter";
 import Counter from "./components/state/function/Counter";
 import Form from "./components/eventListener/functional/Form";
+import ClassForm from "./components/eventListener/class/ClassForm";
 
 const MemorizedClassBtn = React.memo(ClassButton);
 const MemorizedBtn = React.memo(Button);
@@ -64,8 +65,14 @@ function App() {
       </div> */}
       {/* <hr/> */}
       <div className='eventListenrLab'>
-        <h3>Form with functional Component</h3>
-        <Form />
+        <div>
+          <h3>Form with Functional Component</h3>
+          <Form />
+        </div>
+        <div>
+          <h3>Form with Class Component</h3>
+          <ClassForm />
+        </div>
       </div>
     </div>
   );

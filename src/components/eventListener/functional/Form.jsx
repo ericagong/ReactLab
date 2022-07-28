@@ -7,23 +7,23 @@ const Form = (props) => {
 
   // componentDidMount()
   useEffect(() => {
-    console.log("First rendered!");
+    console.log("Functional :: First rendered!");
   }, []);
 
   // componentDidMount() + componentDidUpdate() with specific state change.
   useEffect(() => {
-    console.log("team name rendered!");
+    console.log("Functional :: team name rendered!");
   }, [team]);
 
   useEffect(
     function () {
-      console.log("number rendered!");
+      console.log("Functional :: number rendered!");
     },
     [number]
   );
 
   const changeFunc = () => {
-    console.log("team name or number rendered!");
+    console.log("Functional :: team name or number rendered!");
   };
 
   useEffect(changeFunc, [team, number]);
