@@ -4,6 +4,8 @@ import SuperConverter from "./components/state/function/SuperConverter";
 import ClassSuperConverter from "./components/state/class/ClassSuperConverter";
 import Button from "./components/props/function/Button";
 import ClassButton from "./components/props/class/ClassButton";
+import ClassCounter from "./components/state/class/ClassCounter";
+import Counter from "./components/state/function/Counter";
 
 // const MemorizedBtn = React.memo(Button);
 const MemorizedClassBtn = React.memo(ClassButton);
@@ -29,11 +31,19 @@ function App() {
   return (
     <div className='App'>
       <div className='stateLab'>
-        <h3>Converter with Functional Component</h3>
-        <SuperConverter></SuperConverter>
-        <hr />
-        <h3>Converter with Class Component</h3>
-        <ClassSuperConverter></ClassSuperConverter>
+        <div className='basicState'>
+          <h3>Converter with Functional Component</h3>
+          <SuperConverter></SuperConverter>
+          <hr />
+          <h3>Converter with Class Component</h3>
+          <ClassSuperConverter></ClassSuperConverter>
+        </div>
+        <div className='asynchronousState'>
+          <h3>Counter setState with Functional Component</h3>
+          <Counter hi='hi' />
+          <h3>Counter setState with Class Component</h3>
+          <ClassCounter hi='hi' />
+        </div>
       </div>
       <hr />
       <div className='propsLab'>
