@@ -7,6 +7,7 @@ import Button from "./components/props/function/Button";
 import ClassButton from "./components/props/class/ClassButton";
 import ClassCounter from "./components/state/class/ClassCounter";
 import Counter from "./components/state/function/Counter";
+import Form from "./components/eventListener/functional/Form";
 
 const MemorizedClassBtn = React.memo(ClassButton);
 const MemorizedBtn = React.memo(Button);
@@ -31,7 +32,7 @@ function App() {
   };
   return (
     <div className='App'>
-      <div className='stateLab'>
+      {/* <div className='stateLab'>
         <div className='basicState'>
           <h3>Converter with Functional Component</h3>
           <SuperConverter></SuperConverter>
@@ -45,8 +46,8 @@ function App() {
           <h3>Counter setState with setState</h3>
           <ClassCounter hi='hi' />
         </div>
-      </div>
-      <hr />
+      </div> */}
+      {/* <hr />
       <div className='propsLab'>
         <h3>Button with functional Component</h3>
         <MemorizedBtn
@@ -60,6 +61,11 @@ function App() {
         <h3>Button with class Component</h3>
         <MemorizedClassBtn text={value2} id='2' changeValue={changeValue} />
         <MemorizedClassBtn text='other' />
+      </div> */}
+      {/* <hr/> */}
+      <div className='eventListenrLab'>
+        <h3>Form with functional Component</h3>
+        <Form />
       </div>
     </div>
   );
