@@ -33,7 +33,7 @@ function App() {
   };
   return (
     <div className='App'>
-      {/* <div className='stateLab'>
+      <div className='stateLab'>
         <div className='basicState'>
           <h3>Converter with Functional Component</h3>
           <SuperConverter></SuperConverter>
@@ -47,8 +47,8 @@ function App() {
           <h3>Counter setState with setState</h3>
           <ClassCounter hi='hi' />
         </div>
-      </div> */}
-      {/* <hr />
+      </div>
+      <hr />
       <div className='propsLab'>
         <h3>Button with functional Component</h3>
         <MemorizedBtn
@@ -62,8 +62,8 @@ function App() {
         <h3>Button with class Component</h3>
         <MemorizedClassBtn text={value2} id='2' changeValue={changeValue} />
         <MemorizedClassBtn text='other' />
-      </div> */}
-      {/* <hr/> */}
+      </div>
+      <hr />
       <div className='eventListenrLab'>
         <div>
           <h3>Form with Functional Component</h3>

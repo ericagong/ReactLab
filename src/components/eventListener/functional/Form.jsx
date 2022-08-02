@@ -29,12 +29,12 @@ const Form = (props) => {
   useEffect(changeFunc, [team, number]);
 
   // componentDidMount(), componentDidUpdate(), componentWillUnmount()
-  // TODO cleanup check!
-  // useEffect(() => {
-  //   return () => {
-  //     console.log("destoyed");
-  //   };
-  // });
+  useEffect(() => {
+    return () => {
+      // 매번 호출됨.. why?
+      console.log("destoyed");
+    };
+  }, [hide]);
 
   const changeHandler = (event) => {
     const id = event.target.id;
